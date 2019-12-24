@@ -26,7 +26,7 @@ public class TankD implements Movable {
         TankD tankD = new TankD();
 
 
-        // reflection - 通过字节码分析类的属性和方法
+        // reflection - 通过字节码分析类的属性和方法，动态代理
         Movable m = (Movable) Proxy.newProxyInstance(TankD.class.getClassLoader(), // ClassLoader() 类的加载器
                 new Class[]{Movable.class},     // 实现的接口数组
                 new InvocationHandler(){        // 接口内部类实现
@@ -40,6 +40,6 @@ public class TankD implements Movable {
                     }
                 });
 
-        m.move();
+        m.move();   //
     }
 }
