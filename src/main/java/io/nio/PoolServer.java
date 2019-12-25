@@ -32,7 +32,7 @@ public class PoolServer {
     }
 
     public void listen() throws IOException{
-        // 轮训访问 selector
+        // 轮询访问 selector
         while(true){
             selector.select();
             Iterator ite = this.selector.selectedKeys().iterator();
